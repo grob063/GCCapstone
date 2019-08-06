@@ -1,0 +1,31 @@
+﻿@model IEnumerable<GrandCircusUniversity.GrandCircusUniversity2.Course>
+@{
+    ViewData["Title"] = "ListOfCourses";
+}
+
+<h1>List Of Courses</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(i => item)
+                </td>
+                <td>
+                    <a asp-action="Create">Register</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
